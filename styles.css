@@ -1,0 +1,164 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+main {
+    font-family: "Space-Grotesk", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: flex;
+    width: 80%;
+    height: 550px;
+}
+
+#images-part{
+    flex-basis: 50%;
+    display: grid;
+    color: white;
+}
+
+#desktop-bg {
+    z-index: -1;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+#front-card-container {
+    width: 447px;
+    height: 245px;
+    display: grid;
+    grid-template-rows: auto auto 70px;
+}
+
+#back-card-container {
+    grid-row: 2;
+    align-self: end;
+    justify-self: right;
+    display: grid;
+}
+
+#back-card {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#back-card-cvc {
+    padding-right: 55px;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    justify-self: end;
+}
+
+#front-card {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+}
+
+#front-card-number {
+    font-weight: bold;
+    font-size: 22px;
+    padding-left: 20px;
+    display: flex;
+    align-items: end;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+#front-card-name {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: end;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#front-card-date {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: end;
+    justify-content: right;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#front-card-logo {
+    padding-top: 20px;
+    padding-left: 20px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+#form-part{
+    font-size: 14px;
+    flex-basis: 50%;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    width: 320px;
+    display: block;
+}
+
+input {
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    width: 0;
+    flex-grow: 1;
+    min-width: 0px;
+    max-width: 100%;
+    height: 35px;
+    padding-left: 12px;
+}
+
+
+.warning {
+    font-size: 10px;
+    color: red;
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
+
+
+@font-face {
+    font-family: 'Space-Grotesk';
+    src: url("font/static/SpaceGrotesk-Regular.ttf") format('truetype');
+    font-weight: regular;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space-Grotesk';
+    src: url("font/static/SpaceGrotesk-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+

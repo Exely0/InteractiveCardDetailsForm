@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="desktop-bg" src="interactive-card-details-form-main/images/bg-main-desktop.png" alt="desktop bg card">
+
+  <main>
+    <div id="images-part">
+      <div id="front-card-container">
+        <img id="front-card" src="interactive-card-details-form-main/images/bg-card-front.png" alt="card front">
+        <img id="front-card-logo" class="card-component" src="interactive-card-details-form-main/images/card-logo.svg" alt="card-logo">
+        <div id="front-card-name" class="card-component">Dupond Dupont</div>
+        <div id="front-card-number" class="card-component">
+          0000000000000000
+        </div>
+        <div id="front-card-date" class="card-component"><p id="card-month">03</p>/<p id="card-year">22</p></div>
+      </div>
+
+      <div id="back-card-container">
+        <img id="back-card" src="interactive-card-details-form-main/images/bg-card-back.png" alt="card back">
+        <div id="back-card-cvc">000</div>
+      </div>
+    </div>
+
+    <div id="form-part">
+
+      <form style="display: flex; flex-direction: column; gap: 20px;">
+
+        <div id="cardholder-name-container" style="display: flex; flex-direction: column; gap: 6px;">
+
+          <label id="cardholder-name-label" class="full-column">Cardholder name</label>
+          <input style="width: 100%;" inputmode="text" id="cardholder-name-input" class="full-column" placeholder="Dupond Dupont" maxlength="16">
+        
+        </div>
+
+        <div id="cardholder-name-container" style="display: flex; flex-direction: column; gap: 6px;">
+
+        
+          <label id="card-number-label" class="full-column">Card Number</label>
+          <input style="width: 100%;" inputmode="numeric" id="card-number-input" class="full-column" placeholder="XXXX XXXX XXXX XXXX" maxlength="16">
+          <div id="card-number-warning" class="warning hidden">Numéro incorrect</div>
+
+        </div>
+        
+        <div id="date-cvc-container" style="display: flex; gap: 10px;">
+
+          <div style="gap: 6px; display: flex; flex-direction: column;">
+
+            <label id="exp-date-m-label">Exp.date(MM/YY)</label>
+
+            <div style="display: flex; gap: 6px;">
+              <input inputmode="numeric" id="exp-date-m-input" placeholder="XX" maxlength="2">
+              <input inputmode="numeric" id="exp-date-y-input" placeholder="XX" maxlength="2">
+            </div>
+            <div id="date-warning" class="warning hidden">Can't be blank</div>
+            
+          </div>
+          
+          <div style="display: flex; gap: 6px; flex-direction: column;">
+            <label id="cvc-label">CVC</label>
+            <input style="width: 100%;" inputmode="numeric" id="cvc-input" placeholder="XXX" maxlength="3">
+            <div id="CVC-warning" class="warning hidden">Can't be blank</div>
+          </div>
+          
+        </div>  
+
+        <input type="submit" value="Confirm" style="width: 100%; border: none; background-color: rgb(16, 16, 69); color: white; padding: 0px;">
+
+      </form>
+
+    </div>
+
+
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
